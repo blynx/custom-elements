@@ -47,6 +47,31 @@
         <div class="card mb-5" id="other-card" data-toggle-knob-boundary>
             <div class="card-header">
                 <h2>
+                    Remote Toggling
+                </h2>
+                <toggle-knob id="that-toggle" data-toggle-class="visually-hidden" open>
+                    <span hidden>open it</span>
+                    <span>close it</span>
+                </toggle-knob>
+            </div>
+            <div class="card-body">
+                <button onclick="document.getElementById('that-toggle').toggle()">
+                    Toggle By .toggle()
+                </button>
+                <button onclick="document.getElementById('that-toggle').toggle()">
+                    Toggle By Attribute
+                </button>
+            </div>
+            <div class="card-body">
+                <p class="teaser"><b>Exercitation adipisicing pariatur officia et. Consectetur deserunt et sunt irure enim qui commodo.</b></p>
+                <p data-toggle-knob-target>Culpa quis voluptate ut excepteur velit in mollit. Pariatur esse non exercitation do enim in laborum elit. Deserunt ea adipisicing eu velit pariatur nulla Lorem in nostrud Lorem nostrud ad enim irure. Sit occaecat et ullamco exercitation mollit occaecat mollit. Exercitation officia laboris cillum irure consequat officia duis id velit in fugiat reprehenderit. Elit quis labore laborum nulla consequat exercitation cupidatat quis fugiat ipsum.</p>
+                <p data-toggle-knob-target>Commodo ad culpa reprehenderit adipisicing non cillum aute commodo. Aute consectetur deserunt non non consequat quis amet ad quis dolor. Sint ea aliqua eiusmod aliquip aliqua aute veniam quis in et eu ullamco amet eu. Irure ut culpa enim laboris. Ex enim elit fugiat aliquip incididunt. Veniam sint voluptate laboris officia aliqua ad ea.</p>
+            </div>
+        </div>
+
+        <div class="card mb-5" id="other-card" data-toggle-knob-boundary>
+            <div class="card-header">
+                <h2>
                     Inactive
                 </h2>
                 <toggle-knob>
