@@ -53,6 +53,13 @@
                     <span hidden>open it</span>
                     <span>close it</span>
                 </toggle-knob>
+                <script>
+                    document.getElementById("that-toggle").addEventListener("toggle", event => {
+                        console.log("A toggle occured!")
+                        console.log(event)
+                        console.log(event?.detail)
+                    })
+                </script>
             </div>
             <div class="card-body">
                 <button onclick="document.getElementById('that-toggle').toggle()">

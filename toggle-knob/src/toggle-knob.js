@@ -46,6 +46,16 @@ export default class ToggleKnob extends HTMLElement {
             for (let target of targets) {
                 target.classList.toggle(this.dataset.toggleClass)
             }
+            this.#dispatchToggleEvent()
         })
+    }
+
+    #dispatchToggleEvent() {
+        this.dispatchEvent(new CustomEvent("toggle", {
+            detail: {
+                element: this,
+                open: this.hasAttribute("open")
+            }
+        }))
     }
 }
