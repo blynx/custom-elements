@@ -3,6 +3,8 @@ const TARGET_SELECT = "[data-toggle-knob-target]"
 
 export default class ToggleKnob extends HTMLElement {
     connectedCallback() {
+        // deactivate if no data-toggle-class is given
+        if (!this.dataset.toggleClass) return
         // switch between direct target or boundary mode
         const targets = this.dataset.target 
             ? document.querySelectorAll(this.dataset.target)
