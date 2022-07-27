@@ -12,16 +12,11 @@ export default class ToggleKnob extends HTMLElement {
             requestAnimationFrame(() => {
                 for (let element of this.children) {
                     element.toggleAttribute("hidden")
-                    this.toggleAttribute("open")
                 }
                 for (let target of targets) {
                     target.classList.toggle(this.dataset.toggleClass)
                 }
             })
         })
-    }
-
-    get isOpen() {
-        this.hasAttribute("open")
     }
 }
